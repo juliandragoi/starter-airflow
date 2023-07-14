@@ -10,5 +10,5 @@ dag = DAG('hello_world', description='Hello World DAG',
 
 commands = BashOperator(
 task_id='test'
-bash_command='sleep 5'
+,bash_command='sleep 5'
 )
