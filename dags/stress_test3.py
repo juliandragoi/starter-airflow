@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 
 
 dag = DAG('high_concurrency', description='high_concurrency DAG',
-          schedule_interval=None,
+          schedule_interval='0 */4 * * *',
           start_date=datetime(2017, 3, 20), catchup=False)
 
 taskx = BashOperator(

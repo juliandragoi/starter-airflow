@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 
 
 dag = DAG('long_running', description='Long Running DAG',
-          schedule_interval=None,
+          schedule_interval='0 */4 * * *',
           start_date=datetime(2017, 3, 20), catchup=False)
 
 commands = BashOperator(
